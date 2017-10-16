@@ -31,6 +31,7 @@ namespace BankofRomaniaProject
             this.Balance = balance;
             this.DepositAmount = depositAmount;
             this.WithdrawlAmount = withdrawlAmount;
+            this.NewBalance = 0d;
         }
 
         public virtual double ViewBalance()
