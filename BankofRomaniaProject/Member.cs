@@ -19,7 +19,7 @@ namespace BankofRomaniaProject
         protected string phone;
         protected string email;
 
-        public string FirstName { get; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public string SocNumber { get; set; }
         public string MemPhone { get; set; }
@@ -37,15 +37,15 @@ namespace BankofRomaniaProject
 
         public Member(string firstName, string lastName, string socNumber, string memPhone, string  streetAddy, string city, string state, string zip, string email)
         {
-            this.FirstName = "Vlad";
-            this.LastName = "Impaler";
-            this.SocNumber = "101-31-1897";
-            this.memPhone = "330- 101-1897";
-            this.StreetAddy = "1897 Bram Stoker Way";
-            this.City = "Transylvania";
-            this.State = "Romania";
-            this.Zip = "10666";
-            this.Email = "StickItToMe@WaysToDie.Com";              
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.SocNumber = socNumber;
+            this.memPhone = memPhone;
+            this.StreetAddy = streetAddy;
+            this.City = city;
+            this.State = state;
+            this.Zip = zip;
+            this.Email = email;              
         }
 
         public string ViewInfo()
