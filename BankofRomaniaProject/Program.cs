@@ -24,18 +24,19 @@ namespace BankofRomaniaProject
                 // instantiate new saving acct
 
                 Saving Saving1 = new Saving("6661897", 1031d);
+                double NewBalance = 0d;
 
-                // opening display menu
                 Console.WriteLine("Welcome back " + Member1.FirstName + " " + Member1.LastName + ".");
                 Console.WriteLine("How can we serve you today?");
                 Console.WriteLine("(Please type in the letter of one of the options below to continue.)");
                 Console.WriteLine("A. View your information \nB. View account balances \nC. Deposit funds \nD. Withdraw funds \nE. Exit");
                 string userAction = Console.ReadLine().ToUpper();
 
+                // opening display menu
+
                 if (userAction == "A")
                 {
                     Member1.ViewInfo();
-
                 }
 
                 else if (userAction == "B")
@@ -77,7 +78,7 @@ namespace BankofRomaniaProject
                         }
 
                         else if (userAction == "D")
-                        Console.WriteLine("From which account would you like to withdrawl funds from?");
+                            Console.WriteLine("From which account would you like to withdrawl funds from?");
                         Console.WriteLine("(Please enter '1' for checking or '2' for saving.)");
                         string withdrawlAcctChoice = Console.ReadLine();
 
@@ -98,7 +99,7 @@ namespace BankofRomaniaProject
                             }
                             else
 
-                            Console.WriteLine("Your current balance is " + (Saving1.Balance - withdrawlAmount) + ". \nPlease retrieve your cash from the tray below.");
+                            Console.WriteLine("Your current balance is " + NewBalance + ". \nPlease retrieve your cash from the tray below.");
                             Console.WriteLine("Thank you for your deposit. Your current balance is " + ".");
                         }
 
@@ -109,17 +110,11 @@ namespace BankofRomaniaProject
                             Environment.Exit(0);
                         }
 
-                    }
+                        while (userAction != "E") ;
 
-                    Console.WriteLine("(Please type in the letter of one of the options below to continue.)");
-                    Console.WriteLine("A. View your information \nB. View account balances \nC. Deposit funds \nD. Withdraw funds \nE. Exit");
-                    string nextUserAction = Console.ReadLine();
-
-                    while (nextUserAction != "E") ;
-
+                    };
                 }
-            }
-        }
-    }
+            
+        
 
     
