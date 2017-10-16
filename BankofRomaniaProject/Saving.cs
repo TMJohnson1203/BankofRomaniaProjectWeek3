@@ -8,23 +8,28 @@ namespace BankofRomaniaProject
 {
     class Saving : AccountInfo
     {
-        protected double savingBal;
-        public double SavingBal { get; set; }
-        double minimum = 50.00d;
+        protected new string acctNum;
+        protected new double balance;
+        public override string AcctNum { get; set; }
+        public override double Balance { get; set; }
 
-        public Saving()
+        public Saving(string acctNum, double balance)
         {
-
+            this.AcctNum = acctNum;
+            this.Balance = balance;
         }
 
-        public Saving(double savingBal)
+        public override void ViewBalance()
         {
-            this.SavingBal = savingBal;
+
         }
 
         public override double Withdrawl()
         {
-           
+            if (Balance - withdrawlAmount < 200d)
+            {
+
+            }
         }
     }
 }

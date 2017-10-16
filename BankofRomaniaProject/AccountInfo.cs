@@ -8,14 +8,26 @@ namespace BankofRomaniaProject
 {
     abstract class AccountInfo
     {
-      
-        public AccountInfo()
+
+        protected string acctNum;
+        protected double balance;
+        public abstract string AcctNum { get; set; }
+        public abstract double Balance { get; set; }
+
+        public AccountInfo(string acctNum, double balance)
+        {
+            this.AcctNum = acctNum;
+            this.Balance = balance;
+        }
+
+        public virtual void ViewBalance()
         {
 
         }
 
-        public virtual void ViewInfo()
+        public double Deposit()
         {
+            return Balance + depositAmount; 
 
         }
 

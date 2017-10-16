@@ -8,24 +8,30 @@ namespace BankofRomaniaProject
 {
     class Checking : AccountInfo
     {
-        protected string checkAcctNum;
-        protected double checkBal;
-        public string CheckAcctNum;
-        public double CheckBal {get; set;}
+        protected new string acctNum;
+        protected new double balance;
+        public override string AcctNum { get; set; }
+        public override double Balance { get; set; }
 
         public Checking()
         {
 
         }
 
-        public Checking(double checkBal)
+        public Checking(string acctNum, double balance)
         {
-            this.CheckBal = checkBal;
+            this.AcctNum = acctNum;
+            this.Balance = balance;
+        }
+        public override void ViewBalance()
+        {
+
         }
 
-        public double CheckCheckBal()
+        public abstract double Withdrawl()
         {
-            return CheckBal;
+
         }
+            
     }
 }
