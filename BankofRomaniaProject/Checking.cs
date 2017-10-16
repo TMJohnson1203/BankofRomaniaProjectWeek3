@@ -25,7 +25,7 @@ namespace BankofRomaniaProject
 
         public override double Withdraw()
         {
-            return Balance - WithdrawlAmount;
+            return NewBalance = (Balance - WithdrawlAmount);
         }
     }
             

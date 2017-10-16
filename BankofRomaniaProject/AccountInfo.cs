@@ -12,11 +12,13 @@ namespace BankofRomaniaProject
         protected double balance;
         protected double depositAmount;
         protected double withdrawlAmount;
+        protected double newBalance;
 
         public string AcctNum { get; set; }
         public double Balance { get; set; }
         public double DepositAmount { get; set; }
         public double WithdrawlAmount { get; set; }
+        public double NewBalance { get; set; }
 
         public AccountInfo()
         {
@@ -38,13 +40,12 @@ namespace BankofRomaniaProject
 
         public virtual double Deposit()
         {
-            return Balance + depositAmount; 
-
+            return NewBalance  = (Balance + depositAmount); 
         }
 
-        public virtual double WithDraw();
+        public virtual double WithDraw()
         {
-         return Balance - WithdrawlAmount;
+        return NewBalance = (Balance - WithdrawlAmount);
         }
     }
 }

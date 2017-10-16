@@ -8,7 +8,7 @@ namespace BankofRomaniaProject
 {
     class Saving : AccountInfo
     {
-      
+
 
         public Saving(string AcctNum, double Balance)
         {
@@ -34,10 +34,11 @@ namespace BankofRomaniaProject
             }
             else
                 Console.WriteLine("Your current balance is ");
-                return Balance - withdrawlAmount;
-                Console.WriteLine("Please retrieve your cash from the tray below.");
+            return Balance - withdrawlAmount;
+            Console.WriteLine("Please retrieve your cash from the tray below.");
             //Console.WriteLine("Thank you for your deposit. Your current balance is " + ".");
 
         }
+    }
 }
 

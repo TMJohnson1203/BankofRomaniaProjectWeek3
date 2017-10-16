@@ -48,6 +48,8 @@ namespace BankofRomaniaProject
             this.Email = email;              
         }
 
+
+
         public string ViewInfo()
         {
             return "First Name: " + firstName + "\nLastName: " + lastName + "Social Security Number: " + socNumber + "\nPhone: " + memPhone + "\nStreet Address: " + streetAddy + "\n " + city + ", " + state + ", " + zip + "\nEmail: " + email;
